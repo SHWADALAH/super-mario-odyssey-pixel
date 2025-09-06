@@ -174,7 +174,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.cappy, function (sprite, otherSp
         story.startCutscene(function () {
             story.printCharacterText("i saw what happens erlier. you've been throught quite the wringner!", "cappy")
             story.printCharacterText("you landed in cap kingdomn. we've been atack by the same monster", "cappy")
+            story.printCharacterText("he kidnapped my sister!", "cappy")
         })
+        game.showLongText("cappy is now your companion!", DialogLayout.Bottom)
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -1656,7 +1658,7 @@ scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     `)
-cap = 1
+cap = 0
 jump = -150
 let mySprite2 = sprites.create(img`
     ................................
