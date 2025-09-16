@@ -201,6 +201,10 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.capture3, function (sprite, 
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     bord = 200
+    while (controller.right.isPressed()) {
+        music.play(music.melodyPlayable(music.footstep), music.PlaybackMode.UntilDone)
+        pause(200)
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
     game.setGameOverPlayable(false, music.melodyPlayable(music.wawawawaa), false)
@@ -215,8 +219,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.cappy, function (sprite, otherSp
             story.printCharacterText("you landed in cap kingdomn. we've been atack by the same monster", "cappy")
             story.printCharacterText("he kidnapped my sister!", "cappy")
         })
-        pause(15000)
+        pause(16000)
         game.showLongText("cappy is now your companion!", DialogLayout.Bottom)
+        pause(5000)
+        story.printCharacterText("throw me with B", "cappy")
         cap = 1
         tiles.setCurrentTilemap(tilemap`niveau9`)
     }
@@ -233,6 +239,10 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.capture4, function (sprite, 
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     bord = -200
+    while (controller.left.isPressed()) {
+        music.play(music.melodyPlayable(music.footstep), music.PlaybackMode.UntilDone)
+        pause(200)
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile28`, function (sprite, location) {
     story.startCutscene(function () {
@@ -1876,6 +1886,7 @@ forever(function () {
         }
     }
     if (controller.left.isPressed()) {
+        music.play(music.melodyPlayable(music.footstep), music.PlaybackMode.UntilDone)
         if (apparance == 0) {
             if (cap == 1) {
                 animation.runImageAnimation(
