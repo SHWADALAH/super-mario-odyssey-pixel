@@ -132,10 +132,6 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.capture, function (sprite, o
         ................................
         `)
 })
-controller.combos.attachCombo("uuddlrlrba", function () {
-    story.printText(":)", 0, 0)
-    story.printText(":)", 0, 0)
-})
 function attemp_jump () {
     console.log("saut")
     mySprite.vy = jump
