@@ -2989,6 +2989,7 @@ forever(function () {
             if (bossvie == 0) {
                 combat = 0
                 sprites.destroy(mySprite3, effects.spray, 100)
+                sprites.destroy(projectile4)
                 tiles.setCurrentTilemap(tilemap`niveau4`)
                 mySprite4 = sprites.create(img`
                     . . . . . . . . . . . . . . . . 
