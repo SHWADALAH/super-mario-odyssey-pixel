@@ -1,6 +1,6 @@
 {
     "name": "Super Mario Odyssey: Nostalgia Quest",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "dependencies": {
         "device": "*",
